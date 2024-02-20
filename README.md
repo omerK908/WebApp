@@ -1,27 +1,25 @@
-# WebApp
+Welcome! This file outlines how to set up and run this Angular project, which is provided without the node_modules folder for size and flexibility.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+Prerequisites:
 
-## Development server
+Node.js and npm installed:
+Download and install from https://nodejs.org/ if not already present.
+Verify installation by running node -v and npm -v in your terminal.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Steps:
 
-## Code scaffolding
+Unzip the project: Extract the received zip file to a desired location on your computer.
+Open terminal: Open a terminal or command prompt and navigate to the project's root directory (where you extracted the files).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install dependencies:
+Use npm to install the required packages:
 
-## Build
+npm install
+ 
+This will download and install all the necessary dependencies based on the project's package.json file.
+Run the project:
+Once dependencies are installed, run the development server using:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+ng serve
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This will start the Angular development server, and the application should be accessible in your web browser at http://localhost:4200 (or the port specified in your configuration).

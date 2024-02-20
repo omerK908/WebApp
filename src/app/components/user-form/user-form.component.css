@@ -1,0 +1,48 @@
+.user-form-container {
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 15px;
+}
+.submit-button {
+  background-color: #fff;
+}
+
+.delete-button {
+  background-color: rgb(255, 95, 95);
+}
+
+.submit-button,
+.delete-button {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}

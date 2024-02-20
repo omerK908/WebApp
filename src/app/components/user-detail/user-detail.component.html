@@ -1,0 +1,21 @@
+<div *ngIf="user" class="user-details-card">
+  <h2>User Details</h2>
+  <div class="details-grid">
+    <div>
+      <p>ID: {{ user.id }}</p>
+    </div>
+    <div>
+      <p>Name: {{ user.name }}</p>
+    </div>
+    <div>
+      <p>Email: {{ user.email }}</p>
+    </div>
+  </div>
+  <div class="actions">
+    <a [routerLink]="['/users', 'edit', user.id]" class="edit-button"
+      ><i class="fa fa-pencil"></i> Edit User</a
+    >
+  </div>
+</div>
+
+<h3 *ngIf="error">{{ error }}</h3>

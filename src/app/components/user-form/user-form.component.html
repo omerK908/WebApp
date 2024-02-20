@@ -1,0 +1,69 @@
+<div class="user-form-container">
+  <h2>{{ isCreate ? "Create User" : "Update User" }}</h2>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend>User Details</legend>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          ngModel
+          [(ngModel)]="user.email"
+          required
+          email
+          class="form-control"
+          placeholder="Enter email"
+          #email="ngModel"
+        />
+        <div *ngIf="!email.valid && email.touched" class="error-message">
+          Enter a valid email (e.g., example@domain.com).
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          ngModel
+          [(ngModel)]="user.name"
+          required
+          class="form-control"
+          placeholder="Enter your name"
+          #name="ngModel"
+        />
+        <div *ngIf="!name.valid && name.touched" class="error-message">
+          Name cannot be empty.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          ngModel
+          [(ngModel)]="user.password"
+          required
+          class="form-control"
+          placeholder="Enter password"
+          #password="ngModel"
+        />
+        <div *ngIf="!password.valid && password.touched" class="error-message">
+          Password cannot be empty.
+        </div>
+      </div>
+      <div class="buttons">
+        <button type="submit" [disabled]="!form.valid" class="submit-button">
+          {{ isCreate ? "Create" : "Update" }}
+        </button>
+        <button *ngIf="!isCreate" (click)="deleteUser()" class="delete-button">
+          Delete User
+        </button>
+      </div>
+    </fieldset>
+  </form>
+</div>
